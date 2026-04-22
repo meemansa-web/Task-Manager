@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2c2c8a, #8a56c2);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #009688;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.card {
+    background-color: #fff;
+    width: 500px;
+    margin: 20px auto;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+h1 {
+    color: #000;
+    font-size: 28px;
+    margin: 0 0 1.2em 0;
+}
+
+#taskForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.task-input {
+    display: flex;
+    align-items: center;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #00796b;
+}
+
+#taskContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.taskCard {
+    background-color: #fff;
+    width: 400px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.taskCard p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.taskCard.pending .status {
+    color: #f57c00;
+}
+
+.taskCard.completed .status {
+    color: #388e3c;
+}
+
+.taskCard.completed p {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.button-box {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.button-box span {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.button-box .green {
+    background: linear-gradient(135deg, #009688, #4db6ac);
+}
+
+.button-box .red {
+    background: linear-gradient(135deg, #d32f2f, #ef5350);
+}
+
+.button-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.confirm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+}
+
+.confirm h1 {
+    margin-top: 0;
+    color: #333;
+}
+
+.confirm p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.confirm button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.confirm .cancel {
+    background-color: #ccc;
+    color: #333;
+}
+
+.confirm .confirmed {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.overlay {
+    filter: blur(5px);
+    pointer-events: none;
+}

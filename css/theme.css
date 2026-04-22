@@ -1,0 +1,46 @@
+/* Theme configuration for Task Manager */
+
+:root {
+    /* Primary colors */
+    --primary-color: #009688;
+    --primary-dark: #00796b;
+    --primary-light: #4db6ac;
+    
+    /* Secondary colors */
+    --secondary-color: #8a56c2;
+    --secondary-dark: #2c2c8a;
+    
+    /* Status colors */
+    --pending-color: #f57c00;
+    --completed-color: #388e3c;
+    
+    /* Danger colors */
+    --danger-color: #d32f2f;
+    --danger-light: #ef5350;
+    
+    /* Neutral colors */
+    --text-dark: #333;
+    --text-light: #888;
+    --text-white: #fff;
+    --bg-light: #fff;
+    --bg-gray: #ccc;
+    
+    /* Shadows */
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.3);
+    --shadow-heavy: 0 4px 20px rgba(0, 0, 0, 0.3);
+    
+    /* Border radius */
+    --radius-sm: 5px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+}
+
+/* Dark theme (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #26a69a;
+        --text-dark: #e0e0e0;
+        --bg-light: #424242;
+    }
+}
