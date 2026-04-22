@@ -54,3 +54,46 @@ export function toggleTaskCompletion(tasks, index) {
     };
     return newTasks;
 }
+
+/**
+ * Update a task's text
+ * @param {Array} tasks - Current tasks array
+ * @param {number} index - Index of task to update
+ * @param {string} newText - New task text
+ * @returns {Array} Updated tasks array
+ */
+export function updateTask(tasks, index, newText) {
+    const newTasks = [...tasks];
+    newTasks[index] = {
+        ...newTasks[index],
+        text: newText.trim()
+    };
+    return newTasks;
+}
+
+/**
+ * Reorder tasks (for drag and drop)
+ * @param {Array} tasks - Current tasks array
+ * @param {number} fromIndex - Source index
+ * @param {number} toIndex - Destination index
+ * @returns {Array} Updated tasks array
+ */
+export function reorderTasks(tasks, fromIndex, toIndex) {
+    const newTasks = [...tasks];
+    const [removed] = newTasks.splice(fromIndex, 1);
+    newTasks.splice(toIndex, 0, removed);
+    return newTasks;
+}
+
+/**
+ * Get task statistics
+ * @param {Array} tasks - Current tasks array
+ * @returns {Object} Statistics object
+ */
+export function getTaskStats(tasks) {
+    return {
+        total: tasks.length,
+        completed: tasks.filter(t => t.completed).length,
+        active: tasks.filter(t => !t.completed).length
+    };
+}
